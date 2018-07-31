@@ -1,5 +1,10 @@
 FROM microsoft/dotnet:2.1.2-aspnetcore-runtime
+
+# tried but no joy with alpine linux
+#FROM microsoft/dotnet-nightly:2.1-runtime-alpine
+
 RUN apt-get update && apt-get install -y libunwind8
+
 WORKDIR /src 
 
 COPY target/ ./

@@ -6,4 +6,4 @@ npm run build
 dotnet publish --output ../target -r linux-x64
 popd
 
-docker build -t www-test . -f Dockerfile_publish
+docker build -t www-test . -f Dockerfile.msft-dotnet

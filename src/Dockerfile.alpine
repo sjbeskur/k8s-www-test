@@ -1,0 +1,10 @@
+FROM microsoft/dotnet-nightly:2.1-runtime-alpine
+
+## 
+# Tried Alpine but no joy .. need to investigate
+
+WORKDIR /src 
+COPY target/ ./
+ENTRYPOINT [ "dotnet","www.dll" ]
+
+
