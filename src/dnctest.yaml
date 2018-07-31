@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1 #for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dnctest
+  labels:
+    app: dnctest
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: dnctest
+    spec:
+      containers:
+      - name: dnctest
+        image: <repo-url>/<repo name>:www-test
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+      imagePullSecrets:
+      - name: samreg

@@ -1,0 +1,9 @@
+FROM microsoft/dotnet:2.1.2-aspnetcore-runtime
+RUN apt-get update && apt-get install -y libunwind8
+WORKDIR /src 
+
+COPY target/ ./
+
+ENTRYPOINT [ "dotnet","www.dll" ]
+
+
