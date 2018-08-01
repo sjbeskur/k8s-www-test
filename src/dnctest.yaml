@@ -1,22 +1,36 @@
 apiVersion: apps/v1beta1 #for versions before 1.6.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: dnctest
+  name: dnctest-deploy
   labels:
-    app: dnctest
+    app: dnctest-app
 spec:
-  replicas: 4
+  replicas: 3
   template:
     metadata:
       labels:
-        app: dnctest
+        app: dnctest-app
     spec:
       containers:
-      - name: dnctest
-        image: <repo-url>/<repo name>:www-test
+      - name: dnctest-cnt
+        image: <repo-url>/<repo-name>:www-test
         ports:
         - name: http
           containerPort: 80
           protocol: TCP
       imagePullSecrets:
       - name: samreg
+---
+apiVersion: v1 #for versions before 1.6.0 use extensions/v1beta1
+kind: Service
+metadata:
+  name: dnctest-svc
+spec:
+  type: LoadBalancer
+  ports: 
+  - port: 80 # port internal to the cluster
+    nodePort: 31800  # external access
+    targetPort: http # port number or name of the container port
+    protocol: TCP
+  selector: 
+    app: dnctest-app
