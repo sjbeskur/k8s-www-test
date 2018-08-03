@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Hello, world!</h1>
-        <p>Welcome to your new single-page application, built with:</p>
+        <p>Welcome to your new single-page application, built for Hunter:</p>
         <ul>
             <li><a href="https://get.asp.net/">ASP.NET Core</a> and <a href="https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx">C#</a>                    for cross-platform server-side code</li>
             <li><a href="https://vuejs.org/">Vue.js</a> for client-side code</li>
@@ -27,12 +27,8 @@
 
         <br><br>
 
-        <h2>This Template brought to you by <a href="http://DevHelp.Online">DevHelp.Online</a></h2>
-        <strong>Consulting | Development | Training | Workshops</strong><br>
-        <p>Get your Team or Application up to speed by working with some of the leading industry experts in JavaScript & ASP.NET!</p>
+        <h2>Version 2.0</h2>
 
-        <strong>Contact us today: </strong>
-        <p><a href="mailto:hello@devhelp.online">Hello@DevHelp.Online</a></p>
     </div>
 </template>
 

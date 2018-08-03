@@ -8,9 +8,14 @@ RUN apt-get update -y \
 WORKDIR /src 
 
 COPY www/ ./
-RUN dotnet build
-RUN npm run build 
+#RUN dotnet build
+RUN npm install
+RUN npm run build
+RUN dotnet publish --output ../target -r linux-x64 # linux-musl-x64 # use this one for alpine linux
 
-ENTRYPOINT [ "dotnet","run" ]
+RUN dotnet publish --output ../target -r linux-x64
+RUN tar -cvzf www.tar.gz -C ../target .
+
+CMD ["/bin/sh"]
 
 

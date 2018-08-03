@@ -63,4 +63,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .navbar-inverse {
+        background-color: #2b4b67;
+        border-color: #080808;
+    }
 }

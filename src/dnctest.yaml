@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dnctest-app
 spec:
-  replicas: 3
+  replicas: 4
   template:
     metadata:
       labels:
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: dnctest-cnt
-        image: <repo-url>/<repo-name>:www-test
+        image: 855281110945.dkr.ecr.us-east-2.amazonaws.com/nmsrepo:www-test
         ports:
         - name: http
           containerPort: 80
@@ -28,7 +28,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports: 
-  - port: 80 # port internal to the cluster
+  - port: 8180 # port internal to the cluster
     nodePort: 31800  # external access
     targetPort: http # port number or name of the container port
     protocol: TCP
