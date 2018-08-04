@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: dnctest-cnt
-        image: 855281110945.dkr.ecr.us-east-2.amazonaws.com/nmsrepo:www-test
+        image: <aws-repo-url>/<repo-name>:www-test
         ports:
         - name: http
           containerPort: 80
