@@ -2,6 +2,6 @@
 mkdir target/
 
 docker build -t www-test-build .
-docker run -it --rm  -v $PWD:/target www-test-build /bin/sh -c "cp www.tar.gz /apps"
+docker run -it --rm  -v $PWD/target:/target www-test-build
 
-docker build -t www-test . -f Dockerfile.msft-dotnet
+docker build -t www-test . -f build/Dockerfile.msft-dotnet
