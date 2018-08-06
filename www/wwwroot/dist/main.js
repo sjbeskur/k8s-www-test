@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f372c449504b6641ef9d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "358014969ad38b9f3a71"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -13182,7 +13182,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "\n.slide-enter-active, .slide-leave-active {\n  transition: max-height .35s\n}\n.slide-enter, .slide-leave-to {\n  max-height: 0px;\n}\n.slide-enter-to, .slide-leave {\n  max-height: 20em;\n}\n", "", {"version":3,"sources":["/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/nav-menu.vue?9da6398a"],"names":[],"mappings":";AAgDA;EACA,2BAAA;CACA;AACA;EACA,gBAAA;CACA;AAEA;EACA,iBAAA;CACA","file":"nav-menu.vue","sourcesContent":["<template>\n    <div class=\"main-nav\">\n        <div class=\"navbar navbar-inverse\">\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle\" v-on:click=\"toggleCollapsed\">\n                        <span class=\"sr-only\">Toggle navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n                <a class=\"navbar-brand\" href=\"/\">ASP.NET Core with Vue.js 2</a>\n            </div>\n            <div class=\"clearfix\"></div>\n            <transition name=\"slide\">\n                <div class=\"navbar-collapse collapse in\" v-show=\"!collapsed\">\n                    <ul class=\"nav navbar-nav\">\n                        <li v-for=\"route in routes\">\n                            <!-- TODO: highlight active link -->\n                            <router-link :to=\"route.path\">\n                                <span :class=\"route.style\"></span> {{ route.display }}\n                            </router-link>\n                        </li>\n                    </ul>\n                </div>\n            </transition>\n        </div>\n    </div>\n</template>\n\n<script>\nimport { routes } from '../routes'\n\nexport default {\n    data() {\n        return {\n            routes,\n            collapsed : true\n        }\n    },\n    methods: {\n        toggleCollapsed: function(event){\n            this.collapsed = !this.collapsed;\n        }\n    }\n}\n</script>\n\n<style>\n.slide-enter-active, .slide-leave-active {\n  transition: max-height .35s\n}\n.slide-enter, .slide-leave-to {\n  max-height: 0px;\n}\n\n.slide-enter-to, .slide-leave {\n  max-height: 20em;\n}\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.slide-enter-active, .slide-leave-active {\n  transition: max-height .35s\n}\n.slide-enter, .slide-leave-to {\n  max-height: 0px;\n}\n.slide-enter-to, .slide-leave {\n  max-height: 20em;\n}\n", "", {"version":3,"sources":["/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/nav-menu.vue?9da6398a"],"names":[],"mappings":";AAgDA;EACA,2BAAA;CACA;AACA;EACA,gBAAA;CACA;AAEA;EACA,iBAAA;CACA","file":"nav-menu.vue","sourcesContent":["<template>\n    <div class=\"main-nav\">\n        <div class=\"navbar navbar-inverse\">\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle\" v-on:click=\"toggleCollapsed\">\n                        <span class=\"sr-only\">Toggle navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n                <a class=\"navbar-brand\" href=\"/\">ASP.NET Core with Vue.js 2</a>\n            </div>\n            <div class=\"clearfix\"></div>\n            <transition name=\"slide\">\n                <div class=\"navbar-collapse collapse in\" v-show=\"!collapsed\">\n                    <ul class=\"nav navbar-nav\">\n                        <li v-for=\"route in routes\">\n                            <!-- TODO: highlight active link -->\n                            <router-link :to=\"route.path\">\n                                <span :class=\"route.style\"></span> {{ route.display }}\n                            </router-link>\n                        </li>\n                    </ul>\n                </div>\n            </transition>\n        </div>\n    </div>\n</template>\n\n<script>\nimport { routes } from '../routes'\n\nexport default {\n    data() {\n        return {\n            routes,\n            collapsed : true\n        }\n    },\n    methods: {\n        toggleCollapsed: function(event){\n            this.collapsed = !this.collapsed;\n        }\n    }\n}\n</script>\n\n<style>\n.slide-enter-active, .slide-leave-active {\n  transition: max-height .35s\n}\n.slide-enter, .slide-leave-to {\n  max-height: 0px;\n}\n\n.slide-enter-to, .slide-leave {\n  max-height: 20em;\n}\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -14385,7 +14385,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/counter-example.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/counter-example.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] counter-example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14423,7 +14423,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/fetch-data.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/fetch-data.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] fetch-data.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14461,7 +14461,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/home-page.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/home-page.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] home-page.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -19416,7 +19416,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/app-root.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/app-root.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] app-root.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -19454,7 +19454,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/hostname.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/hostname.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] hostname.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -19492,7 +19492,7 @@ var Component = __webpack_require__(25)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/src/www/ClientApp/components/nav-menu.vue"
+Component.options.__file = "/home/sbeskur/repos/public/k8s-www-test/www/ClientApp/components/nav-menu.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] nav-menu.vue: functional components are not supported with templates, they should use render functions.")}
 
