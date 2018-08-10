@@ -33,7 +33,9 @@ namespace www.Controllers
         public string HostName(){
             return Environment.MachineName;
         }
-        public string Foo(){
+
+        [HttpGet("elementversion")]
+        public string ElementList(){
             var client = new RestClient("http://api-svc:8800/api/elements/version"); 
             IRestResponse response = client.Execute(new RestRequest()); 
             //var rslt = JArray.Parse(response.Content);

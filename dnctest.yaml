@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: dnctest-cnt
-        image: <aws-repo-url>/<repo-name>:www-test
+        image: <repo-uri>/www-test:v2.11
         ports:
         - name: http
           containerPort: 80

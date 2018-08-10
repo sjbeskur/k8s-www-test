@@ -44,14 +44,14 @@ def tag_image(repo, tag):
   tag_cmd = "docker tag www-test:latest {repoUri}:{tag}"
   print  "\nTagging image with: " + tag_cmd.format(repoUri=repo, tag=tag)
   print  "\t ->" + tag_cmd.format(repoUri=repo,tag=tag)
-  execute_cmd(tag_cmd.format(repoUri,tag))
+  execute_cmd(tag_cmd.format(repoUri=repo, tag=tag))
 
 
 def push_to_repo(repo, tag):
   push_cmd = "docker push {repoUri}:{tag}"
   print  "\nPublishing image to: " + repo + " with tag: "  + tag
   print  "\t ->" + push_cmd.format(repoUri=repo,tag=tag)
-  execute_cmd(push_cmd.format(repoUri,tag))
+  execute_cmd(push_cmd.format(repoUri=repo,tag=tag))
 
 
 if __name__ == "__main__":
