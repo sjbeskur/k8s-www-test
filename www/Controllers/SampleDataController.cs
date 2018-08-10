@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 
 namespace www.Controllers
 {
@@ -30,20 +33,20 @@ namespace www.Controllers
         public string HostName(){
             return Environment.MachineName;
         }
+        public string Foo(){
+            var client = new RestClient("http://api-svc:8800/api/elements/version"); 
+            IRestResponse response = client.Execute(new RestRequest()); 
+            //var rslt = JArray.Parse(response.Content);
+            return response.Content;
+        }
 
-        public class WeatherForecast
-        {
+        public class WeatherForecast{
             public string DateFormatted { get; set; }
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
-
-            public int TemperatureF
-            {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
+            public int TemperatureF{
+                get { return 32 + (int)(TemperatureC / 0.5556); }
+            }            
         }
     }
 }
